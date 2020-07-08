@@ -178,7 +178,6 @@ a {
 
 .advertisement-container {
     width: 100%;
-    margin-bottom: 50px;
 }
 
 #blmVideo {
@@ -192,7 +191,7 @@ a {
 
 .shop-products h1 {
     text-align: center;
-    margin-bottom: 50px;
+    margin: 50px 0;
 }
 
 .shop-products-container {
