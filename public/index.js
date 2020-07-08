@@ -1,8 +1,6 @@
+// import in from fetch()
 const storeData = {
-  "item1": {
-      "route": "/item1",
-      "img": "./image",
-      "product": "item1",
+  "item 1": {
       "price": 10,
       "sizeList": true,
       "size": {
@@ -13,26 +11,17 @@ const storeData = {
           "xxl": true
       }
   },
-  "item2": {
-      "route": "/item2",
-      "img": "./image",
-      "product": "item2",
+  "item XXXXX": {
       "price": 90,
       "sizeList": false,
       "soldout": false
   },
   "item3": {
-      "route": "/item3",
-      "img": "./image",
-      "product": "item3",
       "price": 30,
       "sizeList": false,
       "soldout": true
   },
   "item4": {
-      "route": "/item4",
-      "img": "./image",
-      "product": "item4",
       "price": 40,
       "sizeList": true,
       "size": {
@@ -44,9 +33,6 @@ const storeData = {
       }
   },
   "item5": {
-      "route": "/item5",
-      "img": "./image",
-      "product": "item5",
       "price": 90,
       "sizeList": false,
       "soldout": false
@@ -76,14 +62,16 @@ for (let i=0; i<test.length; i++) {
 }
 
 //cart-btn click
-const cartContainer = document.querySelector(".cart-container");
+const modalContainer = document.querySelector(".modal-container");
 const cartBtn = document.querySelector(".cart-btn");
 const exitBtn = document.querySelector(".exit-btn");
 cartBtn.addEventListener('click', () => {
-    cartContainer.classList.toggle("visable");
+    modalContainer.classList.toggle("visable");
+    document.body.classList.toggle("hide-scroll");
 });
 exitBtn.addEventListener('click', () => {
-    cartContainer.classList.toggle("visable");
+    modalContainer.classList.toggle("visable");
+    document.body.classList.toggle("hide-scroll");
 });
 
 let keys = [];
@@ -92,9 +80,8 @@ const shopProductsContainer = document.querySelector(".shop-products-container")
 for (i in storeData) {
     keys.push(i);
     let temp = document.createElement("div");
-    temp.setAttribute("item", `${i}`)
     temp.setAttribute("class", "item-container")
-    temp.innerHTML = `<div class="item-container-image-container"><img src="${storeData[i].image}" alt="shop item"></div><div class="item-container-title">${storeData[i].product}</div><div class="item-container-footer">$${storeData[i].price}</div>`;
+    temp.innerHTML = `<div class="item-container-image-container"><img src="./products/${i}/1.png" alt="shop item"></div><div class="item-container-title">${i}</div><div class="item-container-footer">$${storeData[i].price}</div>`;
     shopProductsContainer.appendChild(temp);
 }
 
