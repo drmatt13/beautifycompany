@@ -4,38 +4,48 @@ const storeData = {
       "price": 10,
       "sizeList": true,
       "size": {
-          "sm": true,
-          "md": true,
-          "lg": true,
-          "xl": true,
-          "xxl": true
-      }
+          "s": 10,
+          "m": 10,
+          "l": 10,
+          "xl": 10,
+          "xxl": 10
+      },
+      "descriptionSmall": "test text",
+      "descriptionLarge": "test text"
   },
   "item XXXXX": {
       "price": 90,
       "sizeList": false,
-      "soldout": false
+      "inventory": 0,
+      "descriptionSmall": "test text",
+      "descriptionLarge": "test text"
   },
   "item3": {
       "price": 30,
       "sizeList": false,
-      "soldout": true
+      "inventory": 99,
+      "descriptionSmall": "test text",
+      "descriptionLarge": "test text"
   },
   "item4": {
       "price": 40,
       "sizeList": true,
       "size": {
-          "sm": true,
-          "md": false,
-          "lg": false,
-          "xl": true,
-          "xxl": false
-      }
+          "s": 10,
+          "m": 0,
+          "l": 0,
+          "xl": 10,
+          "xxl": 0
+      },
+      "descriptionSmall": "test text",
+      "descriptionLarge": "test text"
   },
   "item5": {
       "price": 90,
       "sizeList": false,
-      "soldout": false
+      "inventory": 0,
+      "descriptionSmall": "test text",
+      "descriptionLarge": "test text"
   }
 };
 
@@ -81,7 +91,7 @@ for (i in storeData) {
     keys.push(i);
     let temp = document.createElement("div");
     temp.setAttribute("class", "item-container")
-    temp.innerHTML = `<div class="item-container-image-container"><img src="./products/${i}/1.png" alt="shop item"></div><div class="item-container-title">${i}</div><div class="item-container-footer">$${storeData[i].price}</div>`;
+    temp.innerHTML = `<div class="item-container-image-container"><img src="./products/${i}/1.png" alt="shop item"></div><div class="item-container-title">${i}</div><div class="item-container-footer">$${storeData[i].price.toFixed(2)}</div>`;
     shopProductsContainer.appendChild(temp);
 }
 
