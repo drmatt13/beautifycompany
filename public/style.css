@@ -114,13 +114,18 @@ a {
 
 .cart-container-title-header div {
     width: auto;
+    font-size: 1.5vw;
 }
 
 .cart-container-title-footer {
-    width: 100%;;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.cart-container-title-footer div {
+    font-size: 1.2vw;
 }
 
 .cart-container-footer {
@@ -349,6 +354,16 @@ a {
     width: 100%;
     min-height: 600px;
     background-color: rgba(119, 135, 160, 0.514);
+}
+
+@media screen and (max-width:800px) {
+    .cart-container-title-header div {
+        font-size: 12px;
+    }
+    
+    .cart-container-title-footer div {
+        font-size: 9.6px;
+    }
 }
 
 @media screen and (max-width:800px) {
