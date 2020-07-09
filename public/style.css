@@ -139,6 +139,7 @@ a {
 .checkout-container {
     position: relative;
     height: 30vh;
+    min-height: 100px;
     width: 30vw;
     display: flex;
     flex-direction: column;
@@ -188,6 +189,7 @@ a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-size: larger;
 }
 
 .checkout-btn:hover {
@@ -356,6 +358,33 @@ a {
     background-color: rgba(119, 135, 160, 0.514);
 }
 
+@media screen and (max-height:600px) {
+
+    .exit-btn {
+        top: 18px;
+        right: 2.5vw;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-height:400px) {
+
+    .subtotal-container {
+        height: 30px;
+    }
+    
+    .info-container {
+        height: 30px;
+    }
+    
+    .checkout-btn {
+        height: 40px;
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 20px;
+    }
+}
+
 @media screen and (max-width:800px) {
     .cart-container-title-header div {
         font-size: 12px;
@@ -464,21 +493,3 @@ a {
     .item-container-footer {
         font-size: x-small;
     }
-
-
-@media screen and (max-height:600px) {
-
-    .exit-btn {
-        top: 18px;
-        right: 2.5vw;
-        font-size: 24px;
-    }
-}
-
-@media screen and (max-height:500px) {
-
-    body {
-        height: 500px;
-    }
-}
-
